@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperatuur Omrekenen</title>
+</head>
+<body>
+
+<h2>Temperatuur Omrekenen</h2>
+
+<form id="celsiusFormulier">
+  <label for="celsius">Temperatuur in Celsius:</label><br>
+  <input type="number" id="celsius" name="celsius" required>
+  <input type="submit" value="Celsius naar Fahrenheit">
+</form>
+
+<p id="resultaat">Het resultaat is:</p>
+
+<script>
+
+  document.getElementById("celsiusFormulier").addEventListener("submit", function(event) {
+    //Test GEEN of WEL een preventDefault(), de pagina zal opnieuw laden
+    event.preventDefault();
+    var celsius = parseFloat(document.getElementById("celsius").value);
+    var fahrenheit = (celsius * 9/5) + 32;
+    document.getElementById("resultaat").textContent = fahrenheit.toFixed(3) + " Fahrenheit.";
+  });
+</script>
+
+</body>
+</html>
