@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {
+    font-family: Arial;
+    background-color: #cdddf2;
+    }
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.particle-deconstruct-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #000;
+}
+
+.particle-deconstruct-element {
+  width: 300px;
+  height: 220px;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.particle-deconstruct-element h2 {
+  color: #0ff;
+  font-size: 2rem;
+  position: relative;
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+
+.particle-deconstruct-element::before,
+.particle-deconstruct-element::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-radial-gradient(
+    circle at center, 
+    #0ff 1px, 
+    transparent 2px, 
+    transparent 50px
+  );
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.particle-deconstruct-element:hover h2 {
+  transform: scale(1.5) rotate(360deg);
+  opacity: 0;
+}
+
+.particle-deconstruct-element:hover::before {
+  transform: scale(2) rotate(45deg);
+  opacity: 0.3;
+}
+
+.particle-deconstruct-element:hover::after {
+  transform: scale(2) rotate(-45deg);
+  opacity: 0.3;
+}
+</style>
+</head>
+<body>
+
+<h2>Vince</h2>
+<p>Voorbeeldpagina voor animatie</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">Home</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Leerling1</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Leerling2</button>
+</div>
+
+<div class="particle-deconstruct-container">
+    <div class="particle-deconstruct-element">
+      <h2>Jenever</h2>
+    </div>
+  </div>
+   
+</body>
+</html> 
