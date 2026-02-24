@@ -96,5 +96,69 @@ body {
 </video>
 </div>
 
+
+<div id="Home" class="tabcontent">
+  <h3>Deze webpagina wordt gemaakt door de leerlingen van 6ICW</h3>
+  <p>Met Github kunnen we samenwerken aan een website. 
+    Elke leerling heeft een eigen tabblad met een link naar zijn pagina.
+  </p>
+  <p>
+    Ook je leerkracht heeft <a href="jan.html">een link</a> naar zijn testpagina
+  </p>
+</div>
+
+<div id="Rik" class="tabcontent">
+  <h3>Dit is het tabblad van Rik</h3>
+  <p>Via deze link kom je op de pagina van Rik: <a href="RB.html">Rik's Page</a></p> 
+</div>
+
+<div id="Vince" class="tabcontent">
+  <h3>Hey</h3>
+  <p>Via deze link kom je op de pagina van Vince: <a href="Vince.html">Vince's Page</a></p>
+</div>
+
+<div id="Liza" class="tabcontent">
+  <h3>Zdravstvujtye</h3>
+  <p>Via deze link kom je op de pagina van Liza: <a href="Liza.html">Liza's Page</a></p>
+</div>
+
+
+<div id="Joel" class="tabcontent">
+  <h3>Hey</h3>
+  <p>Via deze link kom je op de pagina van Joel: <a href="joel.html">Joel's Page</a></p>
+</div>
+
+
+<div id="Thiebe" class="tabcontent">
+  <h3>Hey</h3>
+  <p>Via deze link kom je op de pagina van Thiebe: <a href="Thiebe.html">Thiebe's Page</a></p>
+</div>
+
+<div id="Ludo" class="tabcontent">
+  <h3>ludoScafé</h3>
+  <p>Via deze link kom je op de pagina van ludoScafé: <a href="ludo.html">Ludo's Page</a></p>
+</div>
+
+<div id="Ben" class="tabcontent">
+  <h3>Hello there</h3>
+  <p>Via <a href="Ben.vannoten.html">deze link</a> kom je op de pagina van Ben</p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
 </body>
 </html>
