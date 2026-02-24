@@ -1,73 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ludowebsite</title>
+    <title>LudoSCafé</title>
+
     <style>
-body {
-    font-family: Arial;
-    background-color: #cdddf2;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #b9cff2, #e8f0ff);
+            margin: 0;
+            padding: 0;
+        }
 
-/* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-}
+        /* Header */
+        .header {
+            background-color: #2c3e50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
 
-/* Style the buttons inside the tab */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-}
+        /* Navbar */
+        .tab {
+            display: flex;
+            background-color: #34495e;
+            overflow: hidden;
+        }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
+        .tab a button {
+            background-color: inherit;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 16px 20px;
+            color: white;
+            font-size: 17px;
+            transition: 0.3s;
+        }
 
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
+        .tab a button:hover {
+            background-color: #2c3e50;
+        }
 
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
-h2{
-  text-align: center;
-}
-</style>
+        .tab a button.active {
+            background-color: #1abc9c;
+        }
+
+        /* Content */
+        .content {
+            padding: 30px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 40px;
+            color: #2c3e50;
+        }
+
+        /* Menu Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th {
+            background-color: #1abc9c;
+            color: white;
+            padding: 12px;
+            font-size: 20px;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            font-size: 17px;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+        }
+
+    </style>
 </head>
+
 <body>
-    <div class="tittelennavbar">
-    <h1>Welcome bij LudoSCafé<h1>
+
+    <div class="header">Welkom bij LudoSCafé</div>
+
     <div class="tab">
-    <a href="index.html"><button class="tablinks"> Home </button></a>
-    <a href="RB.html"><button>Rik</button></a>
-    <a href="Vince.html"><button >Vince</button></a>
-    <a href="Liza.html"><button>Liza</button></a>
-    <a href="joel.html"><button>Joel</button></a>
-    <a href="Thiebe.html"><button>Thiebe</button></a>
-    <a href="Ben.vannoten.html"><button>Ben</button></a>
+        <a href="index.html"><button class="active">Home</button></a>
+        <a href="RB.html"><button>Rik</button></a>
+        <a href="Vince.html"><button>Vince</button></a>
+        <a href="Liza.html"><button>Liza</button></a>
+        <a href="joel.html"><button>Joel</button></a>
+        <a href="Thiebe.html"><button>Thiebe</button></a>
+        <a href="Ben.vannoten.html"><button>Ben</button></a>
     </div>
-    </div>
-    <div class="Mainwebsite">
-      <h2>Onze aanbot</h2>
+
+    <div class="content">
+
+        <h2>Ons Aanbod</h2>
+
+        <table>
+            <tr><th>Softdrinks</th></tr>
+            <tr><td>Cola</td></tr>
+            <tr><td>Fanta</td></tr>
+            <tr><td>Sprite</td></tr>
+            <tr><td>Schweppes</td></tr>
+
+            <tr><th>Cocktails</th></tr>
+            <tr><td>De Stoner</td></tr>
+            <tr><td>De Scoffe</td></tr>
+            <tr><td>Pina Colada</td></tr>
+            <tr><td>Mai Tai</td></tr>
+            <tr><td>Mai Tai Infusion</td></tr>
+
+            <tr><th>Mocktails</th></tr>
+            <tr><td>Pina Colada ZA</td></tr>
+            <tr><td>Dikke Loser</td></tr>
+            <tr><td>Ik geloof niet in alcohol</td></tr>
+
+            <tr><th>Voedsels</th></tr>
+            <tr><td>Scake</td></tr>
+            <tr><td>Stosti</td></tr>
+            <tr><td>Tosti</td></tr>
+            <tr><td>Baguette Fromage</td></tr>
+            <tr><td>Arabiata</td></tr>
+            <tr><td>Mortadella met mayonaise en Sbrood</td></tr>
+        </table>
+
+        <h2>Voorwaarden</h2>
+        <p style="text-align:center;">Hier kun je later voorwaarden of huisregels toevoegen.</p>
+
+        <h2>Locatie</h2>
+        <p style="text-align:center;">Adres of Google Maps embed kan hier komen.</p>
+
+        <h2>Content</h2>
+        <p style="text-align:center;">Foto’s, video's of andere info kan hier worden geplaatst.</p>
 
     </div>
-    
+
 </body>
 </html>
