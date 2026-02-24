@@ -13,40 +13,44 @@ body {
     }
 
 /* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
+.dropbtn {
+  background-color: #162016;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
   background-color: #f1f1f1;
 }
 
-/* Style the buttons inside the tab */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
+.dropdown:hover .dropbtn {
+  background-color: #5e85aa;
 }
 
 .center {
@@ -66,16 +70,18 @@ body {
 }
 </style>
 
-<body>
-  <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Home')">Home</button>
-  <button class="tablinks" onclick="openCity(event, 'Rik')">Rik</button>
-  <button class="tablinks" onclick="openCity(event, 'Vince')">Vince</button>
-  <button class="tablinks" onclick="openCity(event, 'Liza')">Liza</button>
-  <button class="tablinks" onclick="openCity(event, 'Joel')">Joel</button>
-  <button class="tablinks" onclick="openCity(event, 'Thiebe')">Thiebe</button>
-  <button class="tablinks" onclick="openCity(event, 'Ludo')">Ludo</button>
-  <button class="tablinks" onclick="openCity(event, 'Ben')">Ben</button>
+<div class="dropdown">
+  <button class="dropbtn">Menu</button>
+  <div class="dropdown-content">
+      <a href="index.html">Home</a>
+      <a href="RB.html">Rik</a>
+      <a href="Vince.html">Vince</a>
+      <a href="Liza.html">Liza</a>
+      <a href="joel.html">Joel</a>
+      <a href="Thiebe.html">Thiebe</a>
+      <a href="ludo.html">Ludo</a>
+      <a href="Ben.html">Ben</a>
+  </div>
 </div>
 
 
@@ -97,52 +103,7 @@ body {
 </div>
 
 
-<div id="Home" class="tabcontent">
-  <h3>Deze webpagina wordt gemaakt door de leerlingen van 6ICW</h3>
-  <p>Met Github kunnen we samenwerken aan een website. 
-    Elke leerling heeft een eigen tabblad met een link naar zijn pagina.
-  </p>
-  <p>
-    Ook je leerkracht heeft <a href="jan.html">een link</a> naar zijn testpagina
-  </p>
-</div>
 
-<div id="Rik" class="tabcontent">
-  <h3>Dit is het tabblad van Rik</h3>
-  <p>Via deze link kom je op de pagina van Rik: <a href="RB.html">Rik's Page</a></p> 
-</div>
-
-<div id="Vince" class="tabcontent">
-  <h3>Hey</h3>
-  <p>Via deze link kom je op de pagina van Vince: <a href="Vince.html">Vince's Page</a></p>
-</div>
-
-<div id="Liza" class="tabcontent">
-  <h3>Zdravstvujtye</h3>
-  <p>Via deze link kom je op de pagina van Liza: <a href="Liza.html">Liza's Page</a></p>
-</div>
-
-
-<div id="Joel" class="tabcontent">
-  <h3>Hey</h3>
-  <p>Via deze link kom je op de pagina van Joel: <a href="joel.html">Joel's Page</a></p>
-</div>
-
-
-<div id="Thiebe" class="tabcontent">
-  <h3>Hey</h3>
-  <p>Via deze link kom je op de pagina van Thiebe: <a href="Thiebe.html">Thiebe's Page</a></p>
-</div>
-
-<div id="Ludo" class="tabcontent">
-  <h3>ludoScafé</h3>
-  <p>Via deze link kom je op de pagina van ludoScafé: <a href="ludo.html">Ludo's Page</a></p>
-</div>
-
-<div id="Ben" class="tabcontent">
-  <h3>Hello there</h3>
-  <p>Via <a href="Ben.vannoten.html">deze link</a> kom je op de pagina van Ben</p>
-</div>
 
 <script>
 function openCity(evt, cityName) {
